@@ -2,8 +2,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 0 100px 0 100px;
 }
 .menu{
     display: flex;
@@ -21,6 +20,11 @@ header{
     text-decoration: none;
     color: black;
 }
+.menu_li:hover{
+    color: blue;
+    text-decoration: underline;
+        }
+
 .logo_im{
     width: 80px;
     height: 80px;
@@ -49,12 +53,12 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 width: 350px;
 height: 450px;
 background: white;
 border-radius: 20px;
 z-index: 3;
+margin-left: 10px;
 }
 .form_name{
     font-family: 'Open Sans';
@@ -64,14 +68,14 @@ z-index: 3;
     color: blue;
     padding: 40px 0 20px 35px;
 }
-input{
+.form_inp{
 margin: 0 30px 20px 30px; 
 height: 50px;
 border-radius: 10px;
 background-color: rgb(231, 231, 231);
 border: 2px solid rgb(231, 231, 231);
 }
-input:hover{
+.form_inp:hover{
     cursor: pointer;
     border: 2px solid rgb(0, 0, 255);
 }
@@ -213,6 +217,7 @@ gap: 40px;
 flex-direction: row;
 justify-content: space-around;
 margin-top: 100px;
+gap: 30px;
 
   }
   .right{
@@ -231,6 +236,10 @@ margin-top: 100px;
     color: blue;
     text-align: left;
   }
+  .rounded-start{
+    width: 100%;
+    height: 100%;
+    }
   .mini_sect{
     background: url(images/bg-02.jpg) center no-repeat;
     background-size: cover;
@@ -327,7 +336,6 @@ margin-top: 100px;
 }
 .numb_pr{
     font-family: 'Hind Siliguri';
-    font-style: Bold;
     font-weight: 700;
     font-size: 60px;
     color: white;
@@ -480,10 +488,7 @@ footer{
     .hero_text{
     margin-left: 80px;
     }
-    .menu_li:hover{
-color: blue;
-text-decoration: underline;
-    }
+    
     .form{
     width: 250px;
     height: 350px;
@@ -533,21 +538,25 @@ text-decoration: underline;
         padding-left: 25px; 
     }
     .info_d{
-        padding-left: 0 20px 0 20px;  
+        padding: 0 20px 0 20px;  
         justify-content: space-around;
     }
+
+    
+       
+      
 }
 @media (max-width: 767px){
 
       .menu-btn{
         display: flex; 
-      align-items: center; 
-      position: fixed;
-      justify-content: space-between;
-      right: 20px;
-      width: 26px;
-      cursor: pointer;
-      z-index: 4;
+        align-items: center; 
+        position: fixed;
+        justify-content: space-between;
+        right: 20px;
+        width: 26px;
+        cursor: pointer;
+      z-index: 5;
     }
     .menu-btn>span,
     .menu-btn>span::before,
@@ -556,18 +565,18 @@ text-decoration: underline;
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #534f4f;
-      z-index: 5;
+      background-color: #514f53;
+      z-index: 6;
     }
     .menu-btn > span::before {
         content: '';
         top: -8px;
-        z-index: 5;
+        z-index: 6;
       }
     .menu-btn > span::after {
         content: '';
         top: 8px;
-        z-index: 5;
+        z-index: 6;
       }
       .menu {
         display: block;
@@ -580,9 +589,10 @@ text-decoration: underline;
         padding: 80px 0;
         list-style: none;
         text-align: center;
-        background-color: rgb(182, 182, 214);
+        background-color: rgb(147, 135, 255);
         box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-        z-index: 3;
+        z-index: 4;
+        opacity: 0.9;
       }
       .menu_li {
         display: block;
@@ -591,39 +601,43 @@ text-decoration: underline;
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
-        z-index: 4;
+        z-index: 5;
       }
       .menu_li:hover {
         background-color: rgb(230, 230, 247);
-        z-index: 5;
+        z-index: 6;
       }
       #menu-header:checked ~ .menu-btn > span {
         transform: rotate(45deg);
-        z-index: 5;
+        z-index: 6;
       }
         
       #menu-header:checked ~ .menu-btn > span::before {
         top: 0;
         transform: rotate(0);
-        z-index: 5;
+        z-index: 6;
       }
       
       #menu-header:checked ~ .menu-btn > span::after {
         top: 0;
         transform: rotate(90deg);
-       z-index: 5;
+       z-index: 6;
       }
       
       #menu-header:checked ~ .menu{
         visibility: visible;
         right: 0; 
       }
+      header{
+        margin: 0 0 0 80px;
+    }
       .hero{
         background: url(images/bg-01.jpg) 60%;
         flex-direction: column;
     }
       .hero_text{
         gap: 15px;
+        margin: 0;
         }
         .form{
         width: 250px;
@@ -659,7 +673,7 @@ text-decoration: underline;
     font-size: 15px;
  }
   .mini_cont{
-     gap: 10;  
+     gap: 10px;  
  }
   .mini_ul li{  
    width: calc(100%/2);
@@ -692,7 +706,7 @@ text-decoration: underline;
             padding-left: 25px; 
         }
         .info_d{
-            padding-left: 0 20px 0 20px;  
+            padding: 0 20px 0 20px;  
             justify-content: space-around;
         }
         .last_contact{
@@ -703,7 +717,7 @@ text-decoration: underline;
             flex-direction: column;
           padding-top: 0;
             gap: 30px;
-            width: 600px;
+            width: 100%;
             height: 300px;
         }
         .info_d{
@@ -726,10 +740,242 @@ text-decoration: underline;
         }
         .first{
            margin-bottom: 50px;
-            width: 600px;
+            width: 100%;
             height: 300px;
             justify-content: left;
            text-align: left;
         }
+       
     
+}
+@media (max-width: 570px){
+    header{
+        margin: 0 0 0 20px;
+    }
+  
+    .menu-btn{
+        display: flex; 
+        align-items: center; 
+        position: fixed;
+        justify-content: space-between;
+        right: 20px;
+        width: 26px;
+        cursor: pointer;
+      z-index: 5;
+    }
+    .menu-btn>span,
+    .menu-btn>span::before,
+    .menu-btn>span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #514f53;
+      z-index: 6;
+    }
+    .menu-btn > span::before {
+        content: '';
+        top: -8px;
+        z-index: 6;
+      }
+    .menu-btn > span::after {
+        content: '';
+        top: 8px;
+        z-index: 6;
+      }
+      .menu {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: rgb(147, 135, 255);
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 4;
+        opacity: 0.9;
+      }
+      .menu_li {
+        display: block;
+        padding: 12px 24px;
+       color: black;
+        font-size: 20px;
+        font-weight: 400;
+        text-decoration: none;
+        margin-right: 0;
+        z-index: 5;
+      }
+      .menu_li:hover {
+        background-color: rgb(230, 230, 247);
+        z-index: 6;
+      }
+      #menu-header:checked ~ .menu-btn > span {
+        transform: rotate(45deg);
+        z-index: 6;
+      }
+        
+      #menu-header:checked ~ .menu-btn > span::before {
+        top: 0;
+        transform: rotate(0);
+        z-index: 6;
+      }
+      
+      #menu-header:checked ~ .menu-btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+       z-index: 6;
+      }
+      
+      #menu-header:checked ~ .menu{
+        visibility: visible;
+        right: 0; 
+      }
+      .hero{
+        background: url(images/bg-01.jpg) 60%;
+        width: 100%;
+        flex-direction: column;
+    }
+      .hero_text{
+        gap: 10px;
+        margin: 0;
+        }
+        .form{
+        width: 250px;
+        height: 350px;
+        margin-top: 20px;
+        }
+        .form-select-lg{
+        height: 40px;
+        width: 190px;
+        font-size: 15px; 
+        }
+        
+        .button_form{
+            height: 40px;
+            width: 100px;
+            margin: 15px 30px 20px 110px; 
+            font-size: 18px;    
+        }
+        .text1{
+            font-size: 30px;
+        }
+        .text2{
+            font-size: 18px;
+            text-align: center;
+        }
+        .container {
+            width: calc(100%/2);
+          }
+          .about{
+  flex-direction: column;
+  }
+  .right{
+    width: 100%;
+    margin: 0;
+    padding: 0 10px 0 10px;
+   }
+   .h_right{
+    font-size: 22px;
+  }
+   .p_about{
+    font-size: 15px;
+    text-align: justify;
+   }
+ .p_mini{
+    font-size: 10px;
+ }
+  .mini_cont{
+     gap: 10px;  
+ }
+  .mini_ul li{  
+   width: 300px;
+    align-content:center;
+    height: 200px; 
+}
+.mini_sect{
+    height: 100%;
+  }
+  .overlay_mini{ 
+    height: 1616px;
+}
+        .container_price{
+            width: 350px;
+        }
+        .menu_li{
+            font-size: 15px;
+        }
+        .logo_im{
+            width: 70px;
+            height: 70px;
+        }
+        .h_last{
+            padding: 0 10px 0 15px;
+            font-size: 17px;
+        }
+        .p_last{
+            font-size: 13px;
+            padding: 0 20px 0 15px;
+        }
+        .icon_ab{
+            padding: 0 10px 10px 15px; 
+        }
+        h3{
+            font-size: 17px;  
+            padding-left: 25px; 
+            margin-top: 20px;
+        }
+        .info_d{
+            padding: 0 20px 0 20px;  
+            justify-content: space-around;
+        }
+        .last_contact{
+            flex-direction: column;
+        justify-content: left;
+        }
+        .contact{
+            flex-direction: column;
+         margin-top: 50px;
+            gap: 30px;
+            width: 100%;
+            height: 300px;
+
+        }
+        .info_d{
+            flex-direction: column;
+            justify-content: left;
+            gap: 10px;
+
+        }
+        .phone_f1{
+            padding-left: 0;
+        }
+        .phone_f2{
+            padding-left: 20px;
+        }
+        .site{
+            transform: translateX(0);
+        }
+        .fa-globe{
+            padding-top: 0;
+        }
+        .first{
+           margin-bottom: 50px;
+            width: 100%;
+            height: 300px;
+            justify-content: left;
+           text-align: left;
+        }
+      .feature{
+        margin: 0 15px 0 15px;
+      }
+        
+       .card-body{
+        margin-top: 20px;
+        font-size: 20px; 
+        gap: 30px;
+       }
 }
