@@ -590,7 +590,6 @@ footer{
         list-style: none;
         text-align: center;
         background-color: white;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
         z-index: 4;
         opacity: 1;
       }
@@ -795,7 +794,6 @@ footer{
         list-style: none;
         text-align: center;
         background-color: white;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
         z-index: 4;
         opacity: 1;
       }
